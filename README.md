@@ -4,6 +4,7 @@ Description : Takes a text file as a command line argument and prints them in th
 Steps: 
 1. 'mvn package'-ing will build a jar file.
 2. The jar can then be used anywhere to process a text file with content like:
+
       GOOG - 50, MS - 10
       SGI - 100, GOOG - 50, MS - 10
       DOW - 300
