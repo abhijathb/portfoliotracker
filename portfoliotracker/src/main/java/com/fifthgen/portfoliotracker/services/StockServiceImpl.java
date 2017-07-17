@@ -19,17 +19,17 @@ public class StockServiceImpl implements StockService {
 	@Override
 	public Client generateClient(String fileLine) {
 		Client newClient = new Client();
-		Stock stock = new Stock();
+		Stock stock;
 		
 		String[] splitStocks = fileLine.split(",");
 		for(String s : splitStocks){
-			
 			String[] s2 = s.split("-");
+			stock = new Stock();
 			stock.setStockName(s2[0].trim());
 			stock.setStockQty(Integer.parseInt(s2[1].trim()));
-			newClient.addStock(stock);
-			newClient.setOrigFileString(fileLine);
+			newClient.addStock(stock);			
 		}
+		newClient.setOrigFileString(fileLine);
 		return newClient;
 	}
 }

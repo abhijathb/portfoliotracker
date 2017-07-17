@@ -18,8 +18,7 @@ public class PortfolioTracker
     {
         List<Client> clientList = new ArrayList<Client>();
         
-        List<String> lines = TextFileParser.readLines(/*args[0]*/"C:\\Users\\hplap\\workspace\\portfoliotracker\\src\\main\\java\\com\\fifthgen\\portfoliotracker\\resources\\portfolio.txt");
-        
+        List<String> lines = TextFileParser.readLines(args[0]/*"./src/main/java/com/fifthgen/portfoliotracker/resources/portfolio.txt"*/);
         StockService service = new StockServiceImpl();
         
         for(String s: lines)
@@ -31,7 +30,5 @@ public class PortfolioTracker
         	System.out.println(c.getOrigFileString());
         /*for(int i=sortedClientList.size()-1; i>=0 ;i--)
         	System.out.println(sortedClientList.get(i).getOrigFileString());*/
-        	
-    	System.out.println( "Hello World!" );
     }
 }
